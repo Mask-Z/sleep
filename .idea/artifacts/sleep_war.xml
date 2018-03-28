@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="sleep:war">
+    <output-path>$PROJECT_DIR$/../sleep/target</output-path>
+    <root id="archive" name="sleep.war">
+      <element id="artifact" artifact-name="sleep:war exploded" />
+    </root>
+  </artifact>
+</component>
