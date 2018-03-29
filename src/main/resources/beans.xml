@@ -3,7 +3,8 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
-    <bean id="sleep1" class="SleepOne" >
-        <constructor-arg name="message" value="啊啊啊"></constructor-arg>
+    <alias name="sleep1" alias="one"/>
+    <bean id="sleep1" class="com.first.SleepOne" >
+        <constructor-arg name="message" value="啊啊啊"/>
     </bean>
 </beans>

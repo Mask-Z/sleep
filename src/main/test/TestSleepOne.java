@@ -1,3 +1,4 @@
+import com.first.SleepOne;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -12,8 +13,9 @@ public class TestSleepOne {
     @Test
     public void checkSpringBeanFactory(){
         ApplicationContext applicationContext = new ClassPathXmlApplicationContext("beans.xml");
-        SleepOne sleepOne = (SleepOne) applicationContext.getBean("sleep1");
-        sleepOne.setMessage("LaLaLa...");
+//        SleepOne sleepOne = (SleepOne) applicationContext.getBean("sleep1");
+        SleepOne sleepOne = applicationContext.getBean("one", SleepOne.class);
+//        sleepOne.setMessage("LaLaLa...");
         sleepOne.printMesage();
     }
 
