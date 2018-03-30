@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基于jQuery和HTML5实现的带进度监控的文件上传插件</title>
+</head>
+<body>
+
+
+</body>
+<script>
+    $("#button").h5upload(function(){
+        url:'/uploadFile',
+            fileObjName:'upload',
+            fileSizeLimit:500*1024*1024,
+            formData:{},
+        onSelect:function(file){
+
+        },
+        onUploadProgress:function(file,uploaded,total){
+
+        },
+        onUploadSuccess:function(file,data){
+
+        },
+        onUploadError:function(file){
+
+        }
+    });
+
+    $("#button").h5upload("cancel",file.id);  //单个文件取消上传
+    $("#button").h5upload("cancel");  //全部取消上传
+
+</script>
+</html>

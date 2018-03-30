@@ -7,4 +7,10 @@
     <bean id="sleep1" class="com.first.SleepOne" >
         <constructor-arg name="message" value="啊啊啊"/>
     </bean>
+    <bean id="sleep2" class="com.first.SleepTwo">
+        <property name="sleepThree" ref="sleep3"/>
+    </bean>
+    <bean id="sleep3" class="com.first.SleepThree" scope="prototype">
+        <property name="i" value="10"/>
+    </bean>
 </beans>
