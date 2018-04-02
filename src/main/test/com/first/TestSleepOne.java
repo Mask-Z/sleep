@@ -1,3 +1,5 @@
+package com.first;
+
 import com.first.SleepOne;
 import com.first.SleepTwo;
 import org.junit.Test;

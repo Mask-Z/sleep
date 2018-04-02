@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../js/jquery-3.3.1.min.js"></script>
+</head>
+<body>
+    <button>Change colors</button>
+    <span></span>
+    <div style="height: 10px"></div>
+    <div style="height: 10px"></div>
+
+    <div style="height: 10px"></div>
+    <div style="height: 10px"></div>
+    <div id="stop">Stop here</div>
+    <div style="height: 10px"></div>
+
+    <div style="height: 10px"></div>
+    <div style="height: 10px"></div>
+</body>
+<script>
+
+    $(function () {
+        $("button").click(function () {
+            $("div").each(function (index) {
+                $(this).css("backgroundColor","yellow");
+                if ($(this).next().is("#stop")) {
+                    $("span").text("Stopped at div index #" + index);
+                    return false;
+                }
+            })
+        })
+    })
+</script>
+</html>

@@ -1,3 +1,5 @@
+package com.first;
+
 import org.junit.Test;
 
 /**
