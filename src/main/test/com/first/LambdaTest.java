@@ -7,6 +7,10 @@ import java.util.List;
 import java.util.function.Predicate;
 
 /**
+ * 创建函数式接口类型的三种方式：
+ *1.lambda表达式
+ *2.方法引用
+ *3.构造方法引用
  * @author 周云龙
  * @date 2018/4/2 13:52
  */
