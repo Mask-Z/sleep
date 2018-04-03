@@ -5,6 +5,7 @@ import com.first.SleepTwo;
 import org.junit.Test;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.core.io.Resource;
 
 /**
  * @author 周云龙
@@ -23,6 +24,9 @@ public class TestSleepOne {
         SleepOne sleepOne = applicationContext.getBean("one", SleepOne.class);
 //        sleepOne.setMessage("LaLaLa...");
         sleepOne.printMesage();
+
+        Resource resource = applicationContext.getResource("http://www.e-jy.com.cn/js/JSON.js");
+        System.out.println(resource.isOpen()+" : "+resource.exists());
     }
 
     @Test

@@ -13,4 +13,6 @@
     <bean id="sleep3" class="com.first.SleepThree" scope="prototype">
         <property name="i" value="10"/>
     </bean>
+    <bean id="bean1" class="com.first.InitBean" init-method="init" destroy-method="destroy" />
+
 </beans>
