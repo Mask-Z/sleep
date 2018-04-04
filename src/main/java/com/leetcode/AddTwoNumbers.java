@@ -1,4 +1,4 @@
-package com.LeetCode;
+package com.leetcode;
 
 /**
  * 给定两个链表分别代表两个非负整数，链表的每个结点分别存储整数的每位数字，且是逆序存储，即：数字最低位存储在链表表头，数字最高位存储在链表表尾。求解这两个整数的和并以相同的链表形式返回计算的结果。
@@ -35,8 +35,12 @@ public class AddTwoNumbers {
 			carry = sum / 10;
 			curr.next = new ListNode(sum % 10);
 			curr = curr.next;
-			if (p != null) p = p.next;
-			if (q != null) q = q.next;
+			if (p != null) {
+				p = p.next;
+			}
+			if (q != null) {
+				q = q.next;
+			}
 		}
 		if (carry > 0) {
 			curr.next = new ListNode(carry);
