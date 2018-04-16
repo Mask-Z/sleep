@@ -9,12 +9,15 @@ import javax.annotation.PreDestroy;
  */
 public class InitBean {
 
-//    @PostConstruct
+    /**
+     * 初始化
+     */
+    @PostConstruct
     public void init(){
         System.out.println("init...");
     }
 
-//    @PreDestroy
+    @PreDestroy
     public void destroy(){
         System.out.println("destroy...");
     }

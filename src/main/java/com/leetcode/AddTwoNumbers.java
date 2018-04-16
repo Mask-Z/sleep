@@ -48,10 +48,26 @@ public class AddTwoNumbers {
 		return dummyHead.next;
 	}
 
+	public String print(ListNode listNode){
+		return print(listNode,"");
+	}
+	public String print(ListNode listNode,String str){
+		str+=listNode.val+"->";
+		if (listNode.next!=null){
+			return print(listNode.next,str);
+		}else {
+			return str.substring(0,str.length()-2);
+		}
+	}
 	public static void main(String[] args) {
 		AddTwoNumbers addTwoNumbers = new AddTwoNumbers();
-		ListNode l1 = addTwoNumbers.new ListNode(243);
-		ListNode l2 = addTwoNumbers.new ListNode(564);
-		System.out.println(addTwoNumbers.addTwoNumbers(l1,l2));
+		ListNode n1 = addTwoNumbers.new ListNode(2);
+		n1.next=addTwoNumbers.new ListNode(4);
+		n1.next.next=addTwoNumbers.new ListNode(3);
+		ListNode n2 = addTwoNumbers.new ListNode(5);
+		n2.next=addTwoNumbers.new ListNode(6);
+		n2.next.next=addTwoNumbers.new ListNode(4);
+		ListNode n3 = (addTwoNumbers.addTwoNumbers(n1,n2));
+		System.out.println(addTwoNumbers.print(n3));
 	}
 }
