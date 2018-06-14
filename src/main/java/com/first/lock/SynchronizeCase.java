@@ -21,7 +21,7 @@ public class SynchronizeCase extends Thread{
 
     public static void main(String[] args) {
         for (int i=0;i<10;i++){
-            new SynchronizeCase().start();
+            new SynchronizeCase().start();   
         }
     }
 }
